@@ -10,7 +10,7 @@ std::pair<size_t, size_t> operator+(std::pair<size_t, size_t> pos, std::pair<int
 }
 
 // Destructores
-Enconding::~Enconding() = default;
+Encoding::~Encoding() = default;
 IFrame::~IFrame() = default;
 PFrame::~PFrame() = default;
 BFrame::~BFrame() = default;
@@ -30,7 +30,10 @@ BFrame::BFrame(IFrame *prevReference, PFrame *nextReference, std::vector<PointMo
 // Methods
 void IFrame::SetPos(PointMotion pm) {
     std::pair<size_t, size_t> to_upd = pm.pos + std::make_pair(pm.dx, pm.dy);
-    ref.at<uchar>(to_upd.second, to_upd.first) = ref.at<uchar>(pm.pos.second, pm.pos.first);
+    cv::Mat copy = ref.clone();
+
+    copy.at<uchar>(to_upd.second, to_upd.first) = ref.at<uchar>(pm.pos.second, pm.pos.first);
+    ref = std::move(copy);
 }
 
 void PFrame::SetPos(PointMotion pm) {

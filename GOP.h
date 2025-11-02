@@ -11,12 +11,12 @@
 // Group Of Pictures
 class GOP {
 private:
-    std::vector<std::unique_ptr<Enconding>> group;
+    std::vector<std::unique_ptr<Encoding>> group;
     size_t tam;
 public:
 
     explicit GOP(size_t tam);
-    void addFrame(std::unique_ptr<Enconding> frame_enc);
+    void addFrame(std::unique_ptr<Encoding> frame_enc);
     std::vector<cv::Mat> decode();
 
 };

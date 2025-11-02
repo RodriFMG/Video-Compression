@@ -19,13 +19,13 @@ struct PointMotion{
 };
 
 
-class Enconding{
+class Encoding{
 public:
     virtual cv::Mat decode() = 0;
-    virtual ~Enconding() = 0;
+    virtual ~Encoding() = 0;
 };
 
-class IFrame : Enconding{
+class IFrame : public Encoding{
 private:
     cv::Mat ref;
 public:
@@ -38,7 +38,7 @@ public:
 
 };
 
-class PFrame : Enconding{
+class PFrame : public Encoding{
 private:
 
     IFrame* ref;
@@ -54,7 +54,7 @@ public:
     ~PFrame() override;
 };
 
-class BFrame : Enconding{
+class BFrame : public Encoding{
 private:
 
     IFrame* prevRef;
