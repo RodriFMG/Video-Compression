@@ -1,0 +1,9 @@
+# ninja log v5
+2	1624	7837956700114475	CMakeFiles/Video_Compression.dir/main.cpp.obj	d4896136b2f8747d
+1624	1895	7837956702319090	Video_Compression.exe	4731faabd4d58771
+8	111	7837956685010396	CMakeFiles/Video_Compression.dir/Encoding.cpp.obj	6fe88db3d39033d9
+3	2263	7838101216537524	CMakeFiles/Video_Compression.dir/main.cpp.obj	d4896136b2f8747d
+28	2266	7838101216537524	CMakeFiles/Video_Compression.dir/Encoding.cpp.obj	6fe88db3d39033d9
+36	2267	7838101216562649	CMakeFiles/Video_Compression.dir/GOP.cpp.obj	97ecbcf1c1ecf80e
+2	1479	7838101545843541	CMakeFiles/Video_Compression.dir/Encoding.cpp.obj	6fe88db3d39033d9
+1480	1699	7838101547280925	Video_Compression.exe	17e39f35188e4084
