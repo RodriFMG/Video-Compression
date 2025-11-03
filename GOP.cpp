@@ -26,3 +26,7 @@ std::vector<cv::Mat> GOP::decode() {
 
     return group_decode;
 }
+
+bool GOP::is_full() {
+    return tam == group.size();
+}

@@ -18,6 +18,7 @@ public:
     explicit GOP(size_t tam);
     void addFrame(std::unique_ptr<Encoding> frame_enc);
     std::vector<cv::Mat> decode();
+    bool is_full();
 
 };
 
